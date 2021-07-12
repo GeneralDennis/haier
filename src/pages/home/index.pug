@@ -1,0 +1,25 @@
+extends /layout/app
+
+block content
+  .home
+    include ../../layout/header/header
+    .home__content
+      .home__content-images
+        img(src="./WM.png", alt="washing mashine").home__content-image.home__content-image--wm
+        img(src="./Phone.png", alt="phone").home__content-image.home__content-image--phone
+
+      .home__content-text
+        .home__content-subtitle Танцевальный челлендж
+        img(src="./Union.svg").home__content-title
+
+        .home__content-description Покажи миру свою Haieroграфию и выиграй одну из трёх стиральных машин Haier!
+
+        .home__content-hashes
+          a.home__content-hash(href="") Челлендж
+          a.home__content-hash(href="") Звук
+          a.home__content-hash(href="") Маска
+
+        .home__content-period с 19 июля по 19 августа 2021
+
+    include ./about/about
+
