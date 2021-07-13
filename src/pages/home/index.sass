@@ -1,21 +1,25 @@
 .home
+  position: relative
   max-width: 1440px
   width: 100%
   padding-top: 22px
   margin: 0 auto
-  background: url('./Bubble.svg') no-repeat, url('./header-bg.png') no-repeat, $color-background
+  background: url('./Bubble.svg') no-repeat, url('./header-bg.png') no-repeat, url('./Background_02.png') no-repeat, #360696
+  background-size: contain, auto 63%, cover
+  background-position: top, top, bottom
 
 .home__content
   display: flex
   width: 100%
+  margin-bottom: 5px
 
 .home__content-images
   display: flex
 .home__content-image--wm
-  transform: translateY(-14%)
+  transform: translateY(-10%)
 
 .home__content-image--phone
-  transform: translate(-55%, -11.3%)
+  transform: translate(-51%, -9%)
 
 .home__content-text
   display: flex
@@ -23,6 +27,7 @@
   flex-direction: column
   margin-right: 270px
   max-width: 490px
+  padding: 50px 0 50px 100px
 
 .home__content-subtitle
   margin-bottom: 24px

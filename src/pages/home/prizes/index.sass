@@ -1,0 +1,67 @@
+.home__prizes
+  padding: 96px 0 172px
+  background: url('../Background_02.png') no-repeat
+  background-size: cover
+  background-position: top center
+
+.home__prizes-subtitle
+  margin-bottom: 14px
+  font-size: 24px
+  line-height: 1.25
+  color: #fff
+  text-align: center
+
+.home__prizes-title
+  margin: 0 auto 77px
+  max-width: 690px
+  font-size: 48px
+  line-height: 1
+  color: #fff
+  text-align: center
+
+.home__prizes-content
+  position: relative
+  display: flex
+  max-width: 1022px
+  width: 100%
+  margin: 0 auto
+  &::before
+    position: absolute
+    top: -10%
+    left: 50%
+    content: ''
+    display: block
+    width: 291px
+    height: 291px
+    background: #fff
+    transform: translateX(-50%)
+    border-radius: 50%
+    filter: blur(70px)
+
+.home__prizes-description
+  padding: 37px 0 0 32px
+  margin-right: 20px
+  flex-shrink: 0
+
+.home__prizes-img
+  position: relative
+
+.home__prizes-item
+  display: flex
+  align-items: center
+  justify-content: start
+  img
+    height: 56px
+    width: 56px
+    margin-right: 24px
+    object-fit: contain
+
+  span
+    display: block
+    max-width: 270px
+    font-size: 20px
+    line-height: 1.25
+    color: #fff
+
+  &:not(:last-child)
+    margin-bottom: 24px

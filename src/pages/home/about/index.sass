@@ -3,5 +3,115 @@
   width: 100%
   padding: 100px 0 64px 120px
   background: #1B034B
-  border-top-right-radius: 32px
-  border-bottom-right-radius: 32px
+  border-top-right-radius: 60px
+  border-bottom-right-radius: 60px
+
+.home__about-subtitle
+  margin-bottom: 5px
+  font-size: 24px
+  line-height: 1.25
+  color: #fff
+
+.home__about-title
+  margin-bottom: 77px
+  font-size: 48px
+  line-height: 1
+  color: #fff
+
+.home__about-text
+  max-width: 140px
+  font-size: 16px
+  line-height: 1.25
+  color: #fff
+  font-family: $font-family-secondary
+  a
+    color: #EC6AFF
+    font-family: inherit
+
+.home__about-steps
+  display: flex
+  margin-bottom: 76px
+
+.home__about-step
+  flex-shrink: 0
+
+.home__about-number
+  margin-bottom: 6px
+  font-size: 96px
+  line-height: 1
+  color: #fff
+
+.home__about-arrow
+  position: relative
+  height: 160px
+  width: 40px
+  margin: 9px 20px 0 47px
+  flex-shrink: 0
+
+  span
+    position: absolute
+    width: 2px
+    height: 90px
+    background: #fff
+    border-radius: 2px
+
+    &:first-child
+      top: 0
+      left: 0
+      transform: rotate(-26.5deg)
+    &:last-child
+      bottom: -10px
+      left: 0
+      transform: rotate(26.5deg)
+
+
+
+.home__about-description
+  margin-bottom: 32px
+  font-size: 24px
+  line-height: 1.25
+  color: #fff
+
+.home__about-rules
+  font-size: 20px
+  line-height: 1.25
+  color: #EC6AFF
+  font-family: $font-family-secondary
+
+// .home__about-arrow--1
+//   span
+//     animation-duration: 12s
+
+// .home__about-arrow--2
+//   span
+//     animation-duration: 10s
+
+// .home__about-arrow--3
+//   span
+//     animation-duration: 8s
+
+// .home__about-arrow--4
+//   span
+//     animation-duration: 6s
+
+@for $i from 1 through 4
+  .home__about-arrow--#{$i}
+    span
+      animation-name: highlight
+      animation-delay: $i * 2s
+      animation-iteration-count: infinite
+      animation-timing-function: ease
+      animation-duration: 12s
+
+
+@keyframes highlight
+  0%
+    box-shadow: 0px 0px 16px #25F4EE, 0px 0px 4px #67FFFF, 0px 0px 8px #67FFFF, 0px 0px 24px #67FFFF, inset 0px 0px 1px #67FFFF
+  50%
+    box-shadow: 0px 0px 16px #25F4EE, 0px 0px 4px #67FFFF, 0px 0px 8px #67FFFF, 0px 0px 24px #67FFFF, inset 0px 0px 1px #67FFFF
+  100%
+    box-shadow: 0px 0px 48px #25F4EE, 0px 0px 32px #67FFFF, 0px 0px 24px #67FFFF
+  // 75%
+  //   box-shadow: 0px 0px 16px #25F4EE, 0px 0px 4px #67FFFF, 0px 0px 8px #67FFFF, 0px 0px 24px #67FFFF, inset 0px 0px 1px #67FFFF
+  // 100%
+  //   box-shadow: 0px 0px 48px #25F4EE, 0px 0px 32px #67FFFF, 0px 0px 24px #67FFFF
