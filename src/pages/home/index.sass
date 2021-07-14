@@ -4,30 +4,57 @@
   width: 100%
   padding-top: 22px
   margin: 0 auto
-  background: url('./Bubble.svg') no-repeat, url('./header-bg.png') no-repeat, url('./Background_02.png') no-repeat, #360696
-  background-size: contain, auto 63%, cover
-  background-position: top, top, bottom
+  background: url('./images/Bubble.svg') no-repeat, url('./images/header-bg.png') no-repeat, #370699
+  background-size: contain, auto 63%
+  background-position: top, top
+
+  @media( max-width: 1024px)
+    background-size: contain, cover
 
 .home__content
   display: flex
   width: 100%
   margin-bottom: 5px
+  @media( max-width: 1180px)
+    justify-content: space-between
 
-.home__content-images
-  display: flex
-.home__content-image--wm
+  @media( max-width: 1024px)
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  @media( max-width: 560px)
+    margin-bottom: 50px
+
+.home__content-image
   transform: translateY(-10%)
+  flex-shrink: 0
 
-.home__content-image--phone
-  transform: translate(-51%, -9%)
+  @media( max-width: 1180px)
+    height: 600px
+    transform: translateY(-12%)
+
+  @media( max-width: 1024px)
+    height: auto
+    transform: translateY(0)
+
 
 .home__content-text
+  position: relative
   display: flex
   align-items: center
   flex-direction: column
-  margin-right: 270px
   max-width: 490px
-  padding: 50px 0 50px 100px
+  padding: 50px 0
+  transform: translateX(-40%)
+  z-index: 1
+
+  @media( max-width: 1024px)
+    transform: translateX(0)
+
+  @media( max-width: 480px )
+    padding: 0 20px
+
 
 .home__content-subtitle
   margin-bottom: 24px
@@ -36,19 +63,36 @@
   color: #fff
   text-align: center
 
+  @media( max-width: 480px)
+    margin-bottom: 16px
+    font-size: 28px
+
+
 .home__content-title
   margin-bottom: 48px
 
+  @media( max-width: 480px)
+    max-width: 260px
+    margin-bottom: 16px
+
 .home__content-description
   margin-bottom: 48px
+  max-width: 400px
   font-size: 24px
   line-height: 1.25
   color: #fff
   text-align: center
 
+  @media( max-width: 480px)
+    margin-bottom: 20px
+    font-size: 20px
+
 .home__content-hashes
   display: flex
   margin: 0 -8px 70px
+
+  @media( max-width: 480px)
+    margin: 0 -4px 48px
 
 .home__content-hash
   display: block
@@ -61,7 +105,18 @@
   background: #EC6AFF
   border-radius: 32px
 
+  @media( max-width: 480px)
+    padding: 15px 24px
+    font-size: 18px
+
+  @media( max-width: 374px)
+    font-size: 14px
+
+
 .home__content-period
   font-size: 20px
   line-height: 1
   color: #fff
+
+  @media( max-width: 480px)
+    font-size: 16px

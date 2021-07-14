@@ -11,7 +11,9 @@ html
     link(rel='apple-touch-icon' href="${require('images/favicon/apple-touch-icon.png')}" type='image/png')
     link(rel='stylesheet' href='webpack/css/vendors.css?' + hash)
     link(rel='stylesheet' href='webpack/css/app.css?' + hash)
+    include ../blocks/gtm/gtm-script
   body
+    include ../blocks/gtm/gtm-noscript
     .wrapper
       .content
         main.main

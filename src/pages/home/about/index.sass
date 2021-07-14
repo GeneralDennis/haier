@@ -1,10 +1,16 @@
 .home__about
   max-width: 1320px
-  width: 100%
+  margin-right: 16px
   padding: 100px 0 64px 120px
   background: #1B034B
   border-top-right-radius: 60px
   border-bottom-right-radius: 60px
+
+  @media(max-width: 1320px)
+    padding: 90px 8px 62px 50px
+
+  @media( max-width: 560px)
+    padding: 64px 8px 62px 16px
 
 .home__about-subtitle
   margin-bottom: 5px
@@ -12,11 +18,21 @@
   line-height: 1.25
   color: #fff
 
+  @media( max-width: 560px)
+    font-size: 20px
+    margin-bottom: 8px
+
 .home__about-title
   margin-bottom: 77px
   font-size: 48px
   line-height: 1
   color: #fff
+  @media( max-width: 768px)
+    margin-bottom: 50px
+
+  @media( max-width: 560px)
+    margin-bottom: 32px
+    font-size: 32px
 
 .home__about-text
   max-width: 140px
@@ -24,22 +40,52 @@
   line-height: 1.25
   color: #fff
   font-family: $font-family-secondary
+
   a
     color: #EC6AFF
     font-family: inherit
+
+  span
+    display: block
+    padding-left: 5px
+
+  @media( max-width: 1024px)
+    max-width: unset
+    span
+      display: inline-block
 
 .home__about-steps
   display: flex
   margin-bottom: 76px
 
+  @media( max-width: 1024px)
+    flex-direction: column
+    align-items: start
+
+  @media( max-width: 560px)
+    margin-bottom: 48px
+
 .home__about-step
   flex-shrink: 0
+
+  @media( max-width: 1024px)
+    display: flex
+    align-items: center
+
+  @media( max-width: 560px)
+    &:not(:last-child)
+      margin-bottom: 24px
 
 .home__about-number
   margin-bottom: 6px
   font-size: 96px
   line-height: 1
   color: #fff
+
+  @media( max-width: 560px)
+    margin-bottom: 9px
+    font-size: 64px
+
 
 .home__about-arrow
   position: relative
@@ -59,12 +105,36 @@
       top: 0
       left: 0
       transform: rotate(-26.5deg)
+
     &:last-child
       bottom: -10px
       left: 0
       transform: rotate(26.5deg)
 
+  @media(max-width: 1320px)
+    margin: 9px 10px 0 17px
 
+  @media(max-width: 1024px)
+    width: 120px
+    height: 30px
+    margin: 0
+    transform: translateY(0)
+    span
+      width: 67px
+      height: 2px
+
+      &:first-child
+        top: 0
+        left: 0
+        transform: rotate(25deg)
+        transform-origin: top left
+      &:last-child
+        top: 0
+        right: 0
+        left: auto
+        bottom: auto
+        transform: rotate(-25deg)
+        transform-origin: top right
 
 .home__about-description
   margin-bottom: 32px
@@ -72,46 +142,33 @@
   line-height: 1.25
   color: #fff
 
+  @media( max-width: 560px)
+    margin-bottom: 24px
+
 .home__about-rules
   font-size: 20px
   line-height: 1.25
   color: #EC6AFF
   font-family: $font-family-secondary
 
-// .home__about-arrow--1
-//   span
-//     animation-duration: 12s
-
-// .home__about-arrow--2
-//   span
-//     animation-duration: 10s
-
-// .home__about-arrow--3
-//   span
-//     animation-duration: 8s
-
-// .home__about-arrow--4
-//   span
-//     animation-duration: 6s
+  @media( max-width: 560px)
+    font-size: 16px
 
 @for $i from 1 through 4
   .home__about-arrow--#{$i}
     span
       animation-name: highlight
-      animation-delay: $i * 2s
+      animation-delay: $i * 1s
       animation-iteration-count: infinite
       animation-timing-function: ease
       animation-duration: 12s
 
 
+
 @keyframes highlight
   0%
-    box-shadow: 0px 0px 16px #25F4EE, 0px 0px 4px #67FFFF, 0px 0px 8px #67FFFF, 0px 0px 24px #67FFFF, inset 0px 0px 1px #67FFFF
-  50%
-    box-shadow: 0px 0px 16px #25F4EE, 0px 0px 4px #67FFFF, 0px 0px 8px #67FFFF, 0px 0px 24px #67FFFF, inset 0px 0px 1px #67FFFF
+    box-shadow: 0px 0px 13px 6px #25f4ee, 0px 0px 8px 0px #67ffff, 0px 0px 20px 4px #67ffff, 0px 0px 20px 0px #67ffff, inset 0px 0px 1px 0px #67ffff
+  90%
+    box-shadow: 0px 0px 13px 6px #25f4ee, 0px 0px 8px 0px #67ffff, 0px 0px 20px 4px #67ffff, 0px 0px 20px 0px #67ffff, inset 0px 0px 1px 0px #67ffff
   100%
-    box-shadow: 0px 0px 48px #25F4EE, 0px 0px 32px #67FFFF, 0px 0px 24px #67FFFF
-  // 75%
-  //   box-shadow: 0px 0px 16px #25F4EE, 0px 0px 4px #67FFFF, 0px 0px 8px #67FFFF, 0px 0px 24px #67FFFF, inset 0px 0px 1px #67FFFF
-  // 100%
-  //   box-shadow: 0px 0px 48px #25F4EE, 0px 0px 32px #67FFFF, 0px 0px 24px #67FFFF
+    box-shadow: none
