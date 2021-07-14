@@ -1,6 +1,11 @@
 import './index.sass';
 import './index.pug';
-import './about';
 import './prizes';
+import InitArrows from './about';
 
-export default () => {};
+export default () => {
+  let $arrows = $('.home__about-arrow')
+  if($arrows.length){
+    new InitArrows($arrows)
+  }
+};

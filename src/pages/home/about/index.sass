@@ -44,6 +44,10 @@
   a
     color: #EC6AFF
     font-family: inherit
+    transition: text-decoration .3s
+
+    &:hover
+      text-decoration: none
 
   span
     display: block
@@ -74,7 +78,7 @@
 
   @media( max-width: 560px)
     &:not(:last-child)
-      margin-bottom: 24px
+      margin-bottom: 23px
 
 .home__about-number
   margin-bottom: 6px
@@ -83,7 +87,7 @@
   color: #fff
 
   @media( max-width: 560px)
-    margin-bottom: 9px
+    margin: 0 16px 9px
     font-size: 64px
 
 
@@ -100,6 +104,7 @@
     height: 90px
     background: #fff
     border-radius: 2px
+    transition: box-shadow .7s ease-in-out
 
     &:first-child
       top: 0
@@ -117,8 +122,9 @@
   @media(max-width: 1024px)
     width: 120px
     height: 30px
-    margin: 0
+    margin: 0 0 23px
     transform: translateY(0)
+
     span
       width: 67px
       height: 2px
@@ -128,6 +134,7 @@
         left: 0
         transform: rotate(25deg)
         transform-origin: top left
+
       &:last-child
         top: 0
         right: 0
@@ -135,6 +142,10 @@
         bottom: auto
         transform: rotate(-25deg)
         transform-origin: top right
+
+.home__about-arrow--highlight
+  span
+    box-shadow: 0px 0px 13px 6px #25f4ee, 0px 0px 8px 0px #67ffff, 0px 0px 20px 4px #67ffff, 0px 0px 20px 0px #67ffff, inset 0px 0px 1px 0px #67ffff
 
 .home__about-description
   margin-bottom: 32px
@@ -150,18 +161,22 @@
   line-height: 1.25
   color: #EC6AFF
   font-family: $font-family-secondary
+  transition: text-decoration .3s
+
+  &:hover
+    text-decoration: none
 
   @media( max-width: 560px)
     font-size: 16px
 
-@for $i from 1 through 4
-  .home__about-arrow--#{$i}
-    span
-      animation-name: highlight
-      animation-delay: $i * 1s
-      animation-iteration-count: infinite
-      animation-timing-function: ease
-      animation-duration: 12s
+// @for $i from 1 through 4
+//   .home__about-arrow--#{$i}
+//     span
+//       animation-name: highlight
+//       animation-delay: $i * 1s
+//       animation-iteration-count: infinite
+//       animation-timing-function: ease
+//       animation-duration: 12s
 
 
 
