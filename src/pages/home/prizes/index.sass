@@ -18,6 +18,17 @@
 .home__prizes-bubble.home__bubble--right
   top: 30% !important
 
+  @media(max-width: 768px)
+    top: auto !important
+    bottom: 0
+
+.home__prizes-bubble
+  @media(max-width: 768px)
+    // height: 50%
+    top: auto !important
+    bottom: 0
+    width: auto
+
 
 .home__prizes-subtitle
   margin-bottom: 14px
@@ -46,6 +57,14 @@
 
   @media (max-width: 768px)
     font-size: 32px
+
+  span
+    &:first-child
+      margin-right: 7px
+
+      @media (max-width: 768px)
+        display: block
+        margin-right: 0
 
 .home__prizes-content
   position: relative

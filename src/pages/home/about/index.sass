@@ -52,12 +52,15 @@
 
   span
     display: block
-    padding-left: 5px
 
   @media( max-width: 1024px)
     max-width: unset
     span
       display: inline-block
+      padding-left: 7px
+
+  @media(max-width: 768px)
+    font-size: 14px
 
 .home__about-steps
   display: flex
@@ -154,8 +157,9 @@
   line-height: 1.25
   color: #fff
 
-  @media( max-width: 560px)
+  @media( max-width: 768px)
     margin-bottom: 24px
+    font-size: 16px
 
 .home__about-rules
   font-size: 20px
@@ -167,7 +171,7 @@
   &:hover
     text-decoration: none
 
-  @media( max-width: 560px)
+  @media( max-width: 768px)
     font-size: 16px
 
 // @for $i from 1 through 4

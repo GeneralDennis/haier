@@ -1,18 +1,20 @@
 .header
+  display: flex
   width: 100%
   padding: 22px 0 0 83px
 
   @media (max-width: 768px)
     padding-left: 0
+    justify-content: center
 
 
 .header__logo
+  position: relative
   display: flex
   align-items: center
   text-decoration: none
+  z-index: 10
 
-  @media (max-width: 768px)
-    justify-content: center
 
 
 .header__logo-text
