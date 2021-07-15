@@ -2,19 +2,19 @@
   position: relative
   max-width: 1440px
   width: 100%
-  padding-top: 22px
   margin: 0 auto
-  background: url('./images/left-big-bubbles.png') no-repeat, url('./images/left-middle-bubbles.png') no-repeat, url('./images/left-sm-bubbles.png') no-repeat, url('./images/right-big-bubbles.png') no-repeat, url('./images/right-middle-bubbles.png') no-repeat, url('./images/right-sm-bubbles.png') no-repeat, url('./images/header-bg.png') no-repeat, #370699
-  background-size: auto, auto, auto, auto, auto, auto, auto
-  background-position: top left, top left, top left, top right, top right, top right, top
-
-  @media( max-width: 1024px)
-    background-size: contain, cover
+  background:  url('./images/header-bg.png') no-repeat, #370699
+  background-position: top
+  overflow: hidden
+  // @media( max-width: 1024px)
+  //   background-size: contain, cover
 
 .home__content
+  position: relative
   display: flex
   width: 100%
   margin-bottom: 5px
+
   @media( max-width: 1180px)
     justify-content: space-between
 
@@ -25,6 +25,23 @@
 
   @media( max-width: 560px)
     margin-bottom: 50px
+
+.home__bubbles
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+.home__bubble
+  position: absolute
+
+  &--left
+    left: 0
+
+  &--right
+    right: 0
+    left: auto !important
 
 .home__content-image
   transform: translateY(-10%)
