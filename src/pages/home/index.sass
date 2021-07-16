@@ -51,16 +51,16 @@
       width: 25%
 
 .home__content-image
-  transform: translateY(-10%)
+  transform: translate(-10%, -20%)
   flex-shrink: 0
 
   @media( max-width: 1180px)
     height: 600px
-    transform: translateY(-12%)
+    // transform: translateY(-12%)
 
   @media( max-width: 1024px)
     height: auto
-    transform: translateY(0)
+    // transform: translateY(0)
 
 
 .home__content-text
@@ -70,11 +70,16 @@
   flex-direction: column
   max-width: 490px
   padding: 50px 0
-  transform: translateX(-40%)
+  transform: translateX(-64%)
   z-index: 1
+
+  @media( max-width: 1180px)
+    transform: translateX(-30%)
 
   @media( max-width: 1024px)
     transform: translateX(0)
+    padding: 0
+    margin-top: -40px
 
   @media( max-width: 480px )
     padding: 0 20px
