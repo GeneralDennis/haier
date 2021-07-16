@@ -18,6 +18,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 /**
  * Webpack server config
@@ -344,6 +345,9 @@ const config = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
     }),
+    new CopyPlugin([
+      { from: 'public', to: 'public'},
+    ]),
     new VueLoaderPlugin(),
   ],
 };
